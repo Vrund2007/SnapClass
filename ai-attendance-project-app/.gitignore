@@ -1,0 +1,16 @@
+# Environments
+venv/
+venv311/
+.venv/
+env/
+
+# Streamlit secrets (DO NOT COMMIT PUBLICLY)
+.streamlit/secrets.toml
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/

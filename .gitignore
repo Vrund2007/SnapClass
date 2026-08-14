@@ -1,0 +1,27 @@
+# Virtual Environments
+venv/
+venv311/
+.venv/
+env/
+*/venv/
+*/venv311/
+*/.venv/
+
+# Environment and Secret Files (DO NOT COMMIT PUBLICLY)
+.env
+*.env
+*/.env
+.streamlit/secrets.toml
+*/.streamlit/secrets.toml
+
+# Python Caches & Build Files
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# OS specific files
+.DS_Store
+Thumbs.db
