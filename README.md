@@ -2,7 +2,9 @@
 
 <div align="center">
 
-![SnapClass Logo](https://i.ibb.co/YTYGn5qV/logo.png)
+<img src="https://i.ibb.co/YTYGn5qV/logo.png" alt="SnapClass Logo" width="130" style="border-radius: 14px; margin-bottom: 8px;" />
+
+<br/>
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://vrundsnapclass.streamlit.app/)
 [![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://snapclass-landing.vercel.app)
