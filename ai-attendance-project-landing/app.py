@@ -9,7 +9,7 @@ except ImportError:
 
 app = Flask(__name__)
 
-STREAMLIT_APP_URL = os.environ.get("STREAMLIT_APP_URL", "http://localhost:8501")
+STREAMLIT_APP_URL = os.environ.get("STREAMLIT_APP_URL", "https://vrundsnapclass.streamlit.app/")
 
 @app.route('/')
 def home():
