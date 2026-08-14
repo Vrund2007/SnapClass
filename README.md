@@ -7,7 +7,7 @@
 <br/>
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://vrundsnapclass.streamlit.app/)
-[![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://snapclass-landing.vercel.app)
+[![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://snappclass.vercel.app)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
 [![Supabase Database](https://img.shields.io/badge/Database-Supabase%20PostgreSQL-3ECF8E?style=flat&logo=supabase&logoColor=white)](https://supabase.com)
 [![DeepFace AI](https://img.shields.io/badge/AI%20Engine-DeepFace-FF6F00?style=flat&logo=tensorflow&logoColor=white)](https://github.com/serengil/deepface)
