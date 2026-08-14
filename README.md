@@ -121,33 +121,33 @@ SnapClass/
 
 ```mermaid
 graph TD
-    User([Teacher or Student]) --> LP[Landing Page (Flask on Vercel)]
-    LP -->|CTA Click| App[AI Attendance App (Streamlit Cloud)]
+    User["Teacher or Student"] --> LP["Landing Page (Flask on Vercel)"]
+    LP -->|"CTA Click"| App["AI Attendance App (Streamlit Cloud)"]
     
     subgraph "Streamlit Application"
-        App --> Home[Role Router]
-        Home -->|Teacher Login| TD[Teacher Dashboard]
-        Home -->|Student Login| SD[Student Dashboard]
+        App --> Home["Role Router"]
+        Home -->|"Teacher Login"| TD["Teacher Dashboard"]
+        Home -->|"Student Login"| SD["Student Dashboard"]
         
-        TD --> AI_Photo[Face Recognition Pipeline]
-        TD --> AI_Voice[Voice Recognition Pipeline]
-        TD --> Subj[Subject & QR Manager]
+        TD --> AI_Photo["Face Recognition Pipeline"]
+        TD --> AI_Voice["Voice Recognition Pipeline"]
+        TD --> Subj["Subject & QR Manager"]
         
-        SD --> Enroll[1-Click QR Enrollment]
-        SD --> Stats[Personal Attendance Tracking]
+        SD --> Enroll["1-Click QR Enrollment"]
+        SD --> Stats["Personal Attendance Tracking"]
     end
     
     subgraph "AI Engine"
-        AI_Photo --> DF[DeepFace Engine / OpenCV]
-        DF --> Match[Cosine Similarity Embedding Matcher]
+        AI_Photo --> DF["DeepFace Engine / OpenCV"]
+        DF --> Match["Cosine Similarity Embedding Matcher"]
     end
     
     subgraph "Cloud Backend"
-        App <--> DB[(Supabase PostgreSQL Database)]
-        DB --- T_Table[(public.teachers)]
-        DB --- S_Table[(public.students)]
-        DB --- Sub_Table[(public.subjects)]
-        DB --- Att_Table[(public.attendance_logs)]
+        App <--> DB[("Supabase PostgreSQL Database")]
+        DB --- T_Table[("public.teachers")]
+        DB --- S_Table[("public.students")]
+        DB --- Sub_Table[("public.subjects")]
+        DB --- Att_Table[("public.attendance_logs")]
     end
 ```
 
