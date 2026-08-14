@@ -763,16 +763,8 @@ h4 {
 }
 
 @media (max-width: 768px) {
-    .navbar .logo-text {
-        display: none;
-    }
-
     .navbar {
-        padding: 12px 20px;
-    }
-
-    .nav-links {
-        display: none;
+        display: none !important;
     }
 
     .hero {
