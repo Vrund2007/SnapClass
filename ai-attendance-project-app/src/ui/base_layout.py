@@ -1,7 +1,6 @@
 import streamlit as st
 
 
-
 def style_background_home():
 
     st.markdown("""
@@ -14,8 +13,19 @@ def style_background_home():
                 .stApp div[data-testid="stColumn"]{
                     background-color:#E0E3FF !important;
                     padding:2.5rem !important;
-                    border-radius: 5rem !important;
-                    }
+                    border-radius: 4rem !important;
+                    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+                    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+                    text-align: center !important;
+                }
+
+                .stApp div[data-testid="stColumn"] h2 {
+                    color: #1e293b !important;
+                    font-weight: 400 !important;
+                    font-size: 2.2rem !important;
+                    margin-bottom: 1.2rem !important;
+                    letter-spacing: -0.01em !important;
+                }
         </style>  
 
                 """
@@ -40,7 +50,7 @@ def style_background_dashboard():
     
 
 def style_base_layout():
-# asdasd
+
     st.markdown("""
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap');
@@ -60,7 +70,8 @@ def style_base_layout():
             h1 {
                 font-family: 'Climate Crisis', sans-serif !important;
                 font-size: 3.5rem !important;
-                line-height:1.1 1important;
+                font-weight: 400 !important;
+                line-height:1.1 !important;
                 margin-bottom:0rem !important;
             }
                 
@@ -68,8 +79,10 @@ def style_base_layout():
             h2 {
                 font-family: 'Climate Crisis', sans-serif !important;
                 font-size: 2rem !important;
-                line-height:0.9 !important;
+                font-weight: 400 !important;
+                line-height:1.0 !important;
                 margin-bottom:0rem !important;
+                color: #1e293b !important;
             }
                 
             h3, h4, p {
@@ -82,6 +95,7 @@ def style_base_layout():
                 background-color: #5865F2 !important;
                 color: white !important;
                 padding: 10px 20px !important;
+                font-weight: 500 !important;
                 border: none !important;
                 transition: transform 0.25s ease-in-out !important;
                 }
@@ -91,6 +105,7 @@ def style_base_layout():
                 background-color: #EB459E !important;
                 color: white !important;
                 padding: 10px 20px !important;
+                font-weight: 500 !important;
                 border: none !important;
                 transition: transform 0.25s ease-in-out !important;
                 }
@@ -100,6 +115,7 @@ def style_base_layout():
                 background-color: black !important;
                 color: white !important;
                 padding: 10px 20px !important;
+                font-weight: 500 !important;
                 border: none !important;
                 transition: transform 0.25s ease-in-out !important;
                 }

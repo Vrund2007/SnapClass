@@ -846,7 +846,7 @@ h4 {
         pointer-events: auto;
     }
 
-    .nav-links a {
+    .nav-links a:not(.btn-pill) {
         font-size: 1.15rem;
         color: #ffffff;
         width: 100%;
@@ -860,10 +860,17 @@ h4 {
     }
 
     .mobile-cta .btn-pill {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
         justify-content: center;
         width: 100%;
-        padding: 16px 28px;
+        padding: 14px 28px;
         font-size: 1.05rem;
+        font-weight: 600;
+    }
+
+    .mobile-cta .btn-pill svg {
+        stroke: #0f172a;
     }
 
     .hero {
