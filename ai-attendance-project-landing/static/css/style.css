@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
     --bg-main: #fcfcfd;
@@ -43,6 +43,7 @@ h2,
 h3,
 h4 {
     font-family: 'Climate Crisis', sans-serif;
+    font-weight: 400;
     line-height: 1.1;
     word-wrap: break-word;
     letter-spacing: -0.02em;
@@ -80,7 +81,7 @@ h4 {
     font-family: 'Climate Crisis', sans-serif;
     font-size: 1.5rem;
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 0.9;
     letter-spacing: 0.02em;
 }
@@ -94,7 +95,7 @@ h4 {
 .nav-links a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.85);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.95rem;
     transition: all 0.2s ease;
     position: relative;
@@ -126,7 +127,7 @@ h4 {
     padding: 12px 28px;
     border-radius: 100px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.95rem;
     display: flex;
     align-items: center;
@@ -165,7 +166,7 @@ h4 {
     padding: 8px 20px;
     border-radius: 100px;
     font-size: 0.85rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-dark);
     margin-bottom: 28px;
     box-shadow: 0 4px 14px rgba(88, 101, 242, 0.1);
@@ -225,7 +226,7 @@ h4 {
     padding: 18px 42px;
     border-radius: 100px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
@@ -244,7 +245,7 @@ h4 {
 .link-action {
     color: var(--text-muted);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.05rem;
     display: flex;
     align-items: center;
@@ -313,7 +314,7 @@ h4 {
 /* Section Tag */
 .section-tag {
     font-size: 0.85rem;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--primary);
@@ -392,9 +393,9 @@ h4 {
 }
 
 .feature-card h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 14px;
-    font-weight: 800;
+    font-weight: 600;
     color: var(--text-dark);
     font-family: 'Outfit', sans-serif;
 }
@@ -403,6 +404,7 @@ h4 {
     color: var(--text-muted);
     font-size: 1rem;
     line-height: 1.65;
+    font-weight: 400;
 }
 
 /* Workflow Section (Teacher & Student) */
@@ -433,7 +435,7 @@ h4 {
 
 .step-badge {
     color: var(--primary);
-    font-weight: 800;
+    font-weight: 600;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -456,6 +458,7 @@ h4 {
     color: var(--text-muted);
     margin-bottom: 24px;
     line-height: 1.7;
+    font-weight: 400;
 }
 
 .flow-image {
@@ -515,7 +518,7 @@ h4 {
 
 .tech-stack .section-tag {
     color: rgba(255, 255, 255, 0.9);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .tech-grid {
@@ -567,11 +570,11 @@ h4 {
 }
 
 .tech-info h4 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-bottom: 8px;
     color: #ffffff;
     font-family: 'Outfit', sans-serif;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .tech-info p {
@@ -588,7 +591,7 @@ h4 {
     padding: 4px 12px;
     border-radius: 100px;
     font-size: 0.7rem;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 8px;
@@ -628,7 +631,7 @@ h4 {
     padding: 20px 44px;
     border-radius: 100px;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 1.1rem;
     display: inline-block;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -666,13 +669,14 @@ h4 {
     font-size: 0.98rem;
     max-width: 320px;
     line-height: 1.6;
+    font-weight: 400;
 }
 
 .footer-links h4 {
     font-size: 1.05rem;
     color: #ffffff;
     margin-bottom: 24px;
-    font-weight: 800;
+    font-weight: 600;
     font-family: 'Outfit', sans-serif;
 }
 
@@ -688,7 +692,7 @@ h4 {
     text-decoration: none;
     color: #94a3b8;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 400;
     transition: color 0.2s ease;
 }
 
@@ -705,7 +709,7 @@ h4 {
 .footer-bottom p {
     color: #64748b;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /* Mobile Responsiveness Improvements */
