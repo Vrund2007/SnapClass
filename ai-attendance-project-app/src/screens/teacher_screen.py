@@ -92,7 +92,7 @@ def teacher_dashboard():
     footer_dashboard()
 
 def teacher_tab_take_attendance():
-    teacher_id = st.session_state.teacher_data['teacher_id']
+    teacher_id = st.session_state.teacher_data.get('teacher_id') or st.session_state.teacher_data.get('id')
     st.header('Take AI Attendance')
 
 
@@ -201,7 +201,7 @@ def teacher_tab_take_attendance():
 
 
 def teacher_tab_manage_subjects():
-    teacher_id = st.session_state.teacher_data['teacher_id']
+    teacher_id = st.session_state.teacher_data.get('teacher_id') or st.session_state.teacher_data.get('id')
     col1, col2 = st.columns(2)
     with col1:
         st.header('Manage Subjects', width='stretch')
@@ -238,7 +238,7 @@ def teacher_tab_manage_subjects():
 def teacher_tab_attendance_records():
     st.header('Attendance Records')
 
-    teacher_id = st.session_state.teacher_data['teacher_id']
+    teacher_id = st.session_state.teacher_data.get('teacher_id') or st.session_state.teacher_data.get('id')
 
     records = get_attendance_for_teacher(teacher_id)
 
@@ -292,6 +292,8 @@ def login_teacher(username, password):
 
     if teacher:
         st.session_state.user_role ='teacher'
+        if 'teacher_id' not in teacher and 'id' in teacher:
+            teacher['teacher_id'] = teacher['id']
         st.session_state.teacher_data = teacher
         st.session_state.is_logged_in = True
         return True
