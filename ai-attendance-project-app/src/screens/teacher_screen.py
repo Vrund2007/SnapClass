@@ -44,7 +44,7 @@ def teacher_dashboard():
     with c1:
         header_dashboard()
     with c2:
-        st.subheader(f"""Welcome, {teacher_data['name']} """)
+        st.markdown(f"""<div style="text-align:right; font-family:'Outfit', sans-serif; font-weight:600; font-size:1.35rem; color:#0f172a; margin-bottom:12px;">Welcome, {teacher_data['name']} 👋</div>""", unsafe_allow_html=True)
         if st.button("Logout", type='secondary', key='loginbackbtn', shortcut="control+backspace"):
             st.session_state['is_logged_in'] = False
             del st.session_state.teacher_data 

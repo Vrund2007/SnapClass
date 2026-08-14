@@ -65,7 +65,7 @@ def style_base_layout():
                 
             .block-container {
                 padding-top:1.5rem !important;    
-                max-width: 900px !important;
+                max-width: 960px !important;
             }
 
             h1 {
@@ -144,6 +144,74 @@ def style_base_layout():
                 transform: none !important;
             }
 
+            /* Streamlit Dialog / Modal Styling - Clean White Card */
+            div[data-testid="stModal"] > div[role="dialog"], div[data-testid="stModal"] > div, [data-testid="stDialog"] > div {
+                background-color: #ffffff !important;
+                border-radius: 28px !important;
+                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25) !important;
+                border: 1px solid rgba(0, 0, 0, 0.08) !important;
+                padding: 2.2rem !important;
+            }
+
+            /* Modal Header Title & Texts */
+            div[data-testid="stModal"] h2, div[data-testid="stModal"] h1, div[data-testid="stModal"] h3, div[data-testid="stModal"] [data-testid="stMarkdownContainer"] p, div[data-testid="stModal"] p {
+                color: #0f172a !important;
+                font-family: 'Outfit', sans-serif !important;
+            }
+
+            div[data-testid="stModal"] h2 {
+                font-weight: 700 !important;
+                font-size: 1.8rem !important;
+                margin-bottom: 6px !important;
+            }
+
+            /* Modal Input Labels */
+            div[data-testid="stModal"] label, div[data-testid="stModal"] label p {
+                color: #0f172a !important;
+                font-weight: 600 !important;
+                font-size: 0.95rem !important;
+            }
+
+            /* Modal Input Fields */
+            div[data-testid="stModal"] input {
+                background-color: #f8fafc !important;
+                color: #0f172a !important;
+                border: 1.5px solid #cbd5e1 !important;
+                border-radius: 12px !important;
+                padding: 12px 16px !important;
+            }
+
+            div[data-testid="stModal"] input:focus {
+                border-color: #5865F2 !important;
+                box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.2) !important;
+            }
+
+            /* Modal Close Button */
+            div[data-testid="stModal"] button[aria-label="Close"], div[data-testid="stModal"] button[data-testid="stBaseButton-header"] {
+                color: #0f172a !important;
+                background-color: #f1f5f9 !important;
+                border-radius: 50% !important;
+            }
+
+            div[data-testid="stModal"] button[aria-label="Close"]:hover {
+                background-color: #e2e8f0 !important;
+            }
+
+            /* Streamlit Alert Banners */
+            div[data-testid="stAlert"] {
+                border-radius: 16px !important;
+                font-family: 'Outfit', sans-serif !important;
+                border: 1px solid rgba(0, 0, 0, 0.05) !important;
+                padding: 1rem 1.25rem !important;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+            }
+
+            div[data-testid="stAlert"] p, div[data-testid="stAlert"] span {
+                color: #0f172a !important;
+                font-weight: 600 !important;
+                font-size: 1rem !important;
+            }
+
             /* Form / Card Container Styling */
             div[data-testid="stForm"], div[data-testid="stVerticalBlockBorderWrapper"] > div {
                 background: #ffffff !important;
@@ -175,7 +243,7 @@ def style_base_layout():
 
             button[kind="tertiary"]{
                 border-radius: 1.5rem !important;
-                background-color: black !important;
+                background-color: #0f172a !important;
                 color: white !important;
                 padding: 10px 20px !important;
                 font-weight: 500 !important;
@@ -184,7 +252,7 @@ def style_base_layout():
             }
 
             button:hover{
-                transform :scale(1.05);
+                transform :scale(1.04);
             }
         </style>  
 
