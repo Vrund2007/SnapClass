@@ -7,7 +7,7 @@ import time
 
 @st.dialog("Enroll in Subject")
 def enroll_dialog():
-    st.markdown('<p style="color: #475569 !important; font-size: 0.95rem; margin-bottom: 1.2rem; font-weight: 500;">Enter the subject code provided by your teacher to enroll</p>', unsafe_allow_html=True)
+    st.markdown("<p style='color:#334155 !important; font-size:1rem; font-weight:500; margin-bottom:16px;'>Enter the subject code provided by your teacher to enroll:</p>", unsafe_allow_html=True)
     join_code = st.text_input('Subject Code', placeholder='Eg. CS101')
 
     if st.button('Enroll now', type='primary', width='stretch'):
