@@ -5,7 +5,7 @@ from src.database.db import create_subject
 
 @st.dialog("Create New Subject")
 def create_subject_dialog(teacher_id):
-    st.markdown("<p style='color:#334155 !important; font-size:1rem; font-weight:500; margin-bottom:16px;'>Enter the details of new subject below:</p>", unsafe_allow_html=True)
+    st.markdown("<div style='color: #000000 !important; font-size: 1.05rem; font-weight: 600; margin-bottom: 16px; font-family: Outfit, sans-serif;'>Enter the details of new subject</div>", unsafe_allow_html=True)
     sub_id = st.text_input("Subject Code", placeholder="CS101")
     sub_name = st.text_input("Subject Name", placeholder="Introduction to Computer Science")
     sub_section = st.text_input("Section", placeholder="A")

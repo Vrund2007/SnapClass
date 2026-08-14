@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 import streamlit as st
 
 from src.ui.base_layout import style_background_dashboard, style_base_layout
@@ -216,21 +217,23 @@ def teacher_tab_manage_subjects():
     if subjects:
         for sub in subjects:
             stats = [
-                ("🫂", "Students", sub['total_students']),
-                ("🕰️", "Classes", sub['total_classes']),
+                ("🫂", "Students", sub.get('total_students', 0)),
+                ("🕰️", "Classes", sub.get('total_classes', 0)),
             ]
-        def share_btn():
-            if st.button(f"Share Code: {sub['name']}", key=f"share_{sub['subject_code']}", icon=":material/share:"):
-                share_subject_dialog(sub['name'], sub['subject_code'])
-            st.space()
+            
+            def make_share_callback(s_name, s_code):
+                def callback():
+                    if st.button(f"Share Code: {s_name}", key=f"share_{s_code}", icon=":material/share:"):
+                        share_subject_dialog(s_name, s_code)
+                return callback
 
-        subject_card(
-            name = sub['name'],
-            code = sub['subject_code'],
-            section = sub['section'],
-            stats=stats,
-            footer_callback=share_btn
-        )
+            subject_card(
+                name=sub['name'],
+                code=sub['subject_code'],
+                section=sub['section'],
+                stats=stats,
+                footer_callback=make_share_callback(sub['name'], sub['subject_code'])
+            )
     else:
         st.info("NO SUBJECTS FOUND. CREATE ONE ABOVE")
 

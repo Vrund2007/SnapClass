@@ -41,6 +41,21 @@ def style_background_dashboard():
                     background: #E0E3FF !important;
                 }
 
+                .subject-card {
+                    background-color: #ffffff !important;
+                    background: #ffffff !important;
+                    border: 2px solid #cbd5e1 !important;
+                    border-left: 8px solid #EB459E !important;
+                    border-radius: 20px !important;
+                    padding: 24px !important;
+                    margin-bottom: 16px !important;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+                }
+
+                .subject-card div, .subject-card span, .subject-card b, .subject-card p {
+                    color: #000000 !important;
+                }
+
         </style>  
 
                 """
@@ -144,6 +159,11 @@ def style_base_layout():
                 transform: none !important;
             }
 
+            /* Stat Pills inside Subject Cards - Pure Black Text */
+            .stat-pill, .stat-pill *, .stat-pill b, .stat-pill span {
+                color: #000000 !important;
+            }
+
             /* Streamlit Dialog / Modal Container - Clean White Card */
             div[data-testid="stModal"] > div[role="dialog"], div[data-testid="stModal"] > div, [data-testid="stDialog"] > div {
                 background-color: #ffffff !important;
@@ -153,24 +173,24 @@ def style_base_layout():
                 padding: 2.2rem !important;
             }
 
-            /* Modal Header Titles & Text - 100% High Contrast Dark Slate */
+            /* Modal Header Titles & Text - 100% High Contrast Pure Black #000000 */
             div[data-testid="stModal"] h1, div[data-testid="stModal"] h2, div[data-testid="stModal"] h3, [data-testid="stDialog"] h1, [data-testid="stDialog"] h2, [data-testid="stDialog"] h3 {
-                color: #0f172a !important;
+                color: #000000 !important;
                 font-family: 'Outfit', sans-serif !important;
                 font-weight: 700 !important;
             }
 
-            div[data-testid="stModal"] p, div[data-testid="stModal"] span, [data-testid="stDialog"] p, [data-testid="stDialog"] span {
-                color: #334155 !important;
+            div[data-testid="stModal"] p, div[data-testid="stModal"] span, div[data-testid="stModal"] div, [data-testid="stDialog"] p, [data-testid="stDialog"] span, [data-testid="stDialog"] div, div[data-testid="stModal"] [data-testid="stMarkdownContainer"] p, div[data-testid="stModal"] [data-testid="stMarkdownContainer"] span {
+                color: #000000 !important;
                 font-family: 'Outfit', sans-serif !important;
-                font-weight: 500 !important;
+                font-weight: 600 !important;
             }
 
             /* Modal Input Labels */
             div[data-testid="stModal"] label, div[data-testid="stModal"] label p, div[data-testid="stModal"] [data-testid="stWidgetLabel"] p {
-                color: #0f172a !important;
+                color: #000000 !important;
                 font-family: 'Outfit', sans-serif !important;
-                font-weight: 600 !important;
+                font-weight: 700 !important;
                 font-size: 0.95rem !important;
             }
 
@@ -201,6 +221,82 @@ def style_base_layout():
                 background-color: #4752C4 !important;
             }
 
+            /* Modal Toggle Buttons */
+            div[data-testid="stModal"] button[kind="tertiary"] {
+                background-color: #f1f5f9 !important;
+                color: #0f172a !important;
+                border: 1.5px solid #cbd5e1 !important;
+                font-weight: 600 !important;
+            }
+
+            div[data-testid="stModal"] button[kind="tertiary"]:hover {
+                background-color: #e2e8f0 !important;
+                color: #000000 !important;
+            }
+
+            div[data-testid="stModal"] button[kind="primary"] {
+                background-color: #5865F2 !important;
+                color: #ffffff !important;
+                font-weight: 600 !important;
+            }
+
+            /* Material Icons Font Preservation */
+            [data-testid="stIconMaterial"], .material-symbols-rounded, .material-icons {
+                font-family: 'Material Symbols Rounded', 'Material Icons', sans-serif !important;
+                font-style: normal !important;
+            }
+
+            /* Modal Camera & File Uploader */
+            div[data-testid="stModal"] div[data-testid="stCameraInput"] video, 
+            div[data-testid="stModal"] div[data-testid="stCameraInput"] img {
+                border-radius: 16px !important;
+                border: 2px solid #cbd5e1 !important;
+            }
+
+            div[data-testid="stFileUploader"] {
+                border-radius: 16px !important;
+            }
+
+            /* File Uploader Dropzone Background & White Instructions */
+            div[data-testid="stFileUploader"] section {
+                border-radius: 14px !important;
+                border: 1.5px dashed #475569 !important;
+                padding: 12px 16px !important;
+            }
+
+            div[data-testid="stFileUploader"] section small,
+            div[data-testid="stFileUploader"] section span,
+            div[data-testid="stFileUploader"] section div,
+            div[data-testid="stFileUploader"] section p {
+                color: #ffffff !important;
+                font-family: 'Outfit', sans-serif !important;
+                font-weight: 500 !important;
+                font-size: 0.9rem !important;
+            }
+
+            /* File Uploader Button - Clean Indigo with No Overlapping Icons */
+            div[data-testid="stFileUploader"] section button {
+                background-color: #5865F2 !important;
+                color: #ffffff !important;
+                border-radius: 10px !important;
+                padding: 8px 18px !important;
+                font-size: 0.95rem !important;
+                font-weight: 600 !important;
+                border: none !important;
+                transform: none !important;
+                box-shadow: none !important;
+            }
+
+            div[data-testid="stFileUploader"] section button:hover {
+                background-color: #4752C4 !important;
+                transform: none !important;
+            }
+
+            /* Hide the duplicate upload ligature text that causes uploadpload */
+            div[data-testid="stFileUploader"] section button [data-testid="stIconMaterial"] {
+                display: none !important;
+            }
+
             /* Streamlit Alert Banners */
             div[data-testid="stAlert"] {
                 border-radius: 16px !important;
@@ -216,13 +312,23 @@ def style_base_layout():
                 font-size: 1rem !important;
             }
 
-            /* Form / Card Container Styling */
+            /* Form / Card Container Styling - Solid Pure White Box with Sharp Slate Border & Soft Shadow */
             div[data-testid="stForm"], div[data-testid="stVerticalBlockBorderWrapper"] > div {
                 background: #ffffff !important;
-                border-radius: 24px !important;
-                padding: 2.2rem !important;
-                border: 1px solid rgba(255, 255, 255, 0.9) !important;
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
+                background-color: #ffffff !important;
+                border-radius: 20px !important;
+                padding: 1.8rem !important;
+                border: 2px solid #cbd5e1 !important;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+            }
+
+            div[data-testid="stVerticalBlockBorderWrapper"] p,
+            div[data-testid="stVerticalBlockBorderWrapper"] span,
+            div[data-testid="stVerticalBlockBorderWrapper"] div,
+            div[data-testid="stVerticalBlockBorderWrapper"] h1,
+            div[data-testid="stVerticalBlockBorderWrapper"] h2,
+            div[data-testid="stVerticalBlockBorderWrapper"] h3 {
+                color: #000000 !important;
             }
 
             button {
