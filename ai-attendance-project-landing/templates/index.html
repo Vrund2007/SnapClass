@@ -15,11 +15,17 @@
             <img src="{{ url_for('static', filename='img/app_logo.png') }}" alt="SnapClass Logo" style="height: 34px;">
             <div class="logo-text">SnapClass</div>
         </div>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
             <a href="#">Home</a>
             <a href="#features">Features</a>
             <a href="#journey">Journey</a>
             <a href="#tech">Tech Stack</a>
+            <div class="mobile-cta">
+                <a href="{{ streamlit_url }}" class="btn-pill">Start AI Attendance <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg></a>
+            </div>
         </div>
         <div class="nav-cta">
             <a href="{{ streamlit_url }}" class="btn-pill">Start AI Attendance <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -27,6 +33,11 @@
                     <path d="M9 18l6-6-6-6" />
                 </svg></a>
         </div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
     <header class="hero">

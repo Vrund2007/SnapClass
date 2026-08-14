@@ -1,5 +1,25 @@
-// Enhanced interactions for SnapClass
+// Enhanced interactions & Mobile Navigation for SnapClass
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Hamburger Menu Toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    if (hamburgerBtn && navLinks) {
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking any nav link
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
     // Scroll Reveal for Feature Cards and Flow Steps
     const observerOptions = {
         threshold: 0.1,
